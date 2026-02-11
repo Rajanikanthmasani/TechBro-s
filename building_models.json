@@ -1,0 +1,32 @@
+[
+    {
+        "id": "small_villa",
+        "name": "Compact Serenity Villa",
+        "description": "Perfect for single nuclear families. Optimized for 30x40 plots.",
+        "area": 1200,
+        "floors": 1,
+        "complexity": "simple",
+        "base_cost": 2500000,
+        "image": "https://img.freepik.com/premium-photo/modern-indian-house-design-with-warm-lighting_962800-45.jpg"
+    },
+    {
+        "id": "modern_duplex",
+        "name": "Heritage Modern Duplex",
+        "description": "Double floors with expansive balconies and modern Indian aesthetics.",
+        "area": 2500,
+        "floors": 2,
+        "complexity": "medium",
+        "base_cost": 5500000,
+        "image": "https://img.freepik.com/premium-photo/3d-rendering-modern-tropical-house-with-warm-lighting_962800-32.jpg"
+    },
+    {
+        "id": "luxury_bungalow",
+        "name": "Grand Vedic Bungalow",
+        "description": "Extravagant living with Vastu-compliant courtyards and premium finishes.",
+        "area": 4500,
+        "floors": 2,
+        "complexity": "complex",
+        "base_cost": 12000000,
+        "image": "https://img.freepik.com/premium-photo/modern-luxury-house-design-with-warm-lighting_962800-28.jpg"
+    }
+]

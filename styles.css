@@ -1,0 +1,641 @@
+/* Modern Mestri - Powerplay Inspired Professional Design System */
+
+:root {
+    /* Indian Heritage + Professional SaaS Palette */
+    --primary: #1E3A8A;
+    /* Deep Indigo / Navy Blue */
+    --primary-light: #3B82F6;
+    --accent: #EA580C;
+    /* Indian Saffron / Safety Orange */
+    --accent-hover: #C2410C;
+    --brick-red: #B91C1C;
+    /* Traditional Red Clay Brick */
+
+    /* Neutral Palette - Warm Indian Morning Aesthetic */
+    --white: #FFFFFF;
+    --bg-main: #FDFBFA;
+    /* Warm Sand/Off-white background */
+    --slate-50: #F8F5F2;
+    --slate-100: #F3EFE9;
+    --slate-200: #E7E0D2;
+    --slate-300: #D1C4B0;
+    --slate-700: #374151;
+    --slate-800: #1F2937;
+    --slate-900: #111827;
+
+    /* Brand Gradients - Deep and Authoritative */
+    --gradient-header: linear-gradient(90deg, #1E3A8A 0%, #2563EB 100%);
+    --gradient-button: linear-gradient(135deg, #EA580C 0%, #FA9F20 100%);
+    /* Saffron Gradient */
+
+    /* Layout Tokens */
+    --text-primary: var(--slate-900);
+    --text-secondary: var(--slate-700);
+    --text-tertiary: var(--slate-500);
+
+    /* Spacing & Borders */
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+
+    /* Shadows - Soft and Professional */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================
+   Header - Professional Sticky
+   ======================================== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--gradient-header);
+    box-shadow: var(--shadow-header);
+    padding: 0.75rem 0;
+    color: var(--white);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 1.75rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--white);
+}
+
+.header-cta {
+    background: var(--white);
+    color: var(--primary);
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.2s;
+}
+
+.header-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* ========================================
+   Hero / Demo Section - Two Column
+   ======================================== */
+.hero-wrapper {
+    background: var(--white);
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--slate-200);
+}
+
+.demo-layout {
+    display: grid;
+    grid-template-columns: 1fr 480px;
+    gap: 5rem;
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.hero-headline {
+    font-size: 3.25rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.hero-accent {
+    color: var(--slate-900);
+}
+
+.hero-subtext {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.value-list {
+    list-style: none;
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--slate-700);
+}
+
+.value-check {
+    color: var(--success);
+    font-size: 1.25rem;
+}
+
+/* ========================================
+   Form Card - Right Column
+   ======================================== */
+.form-card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-card);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--slate-800);
+}
+
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--slate-700);
+}
+
+.form-label .required {
+    color: var(--error);
+    margin-left: 0.1rem;
+}
+
+.form-input {
+    padding: 0.75rem 1rem;
+    background: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+}
+
+.form-footer {
+    margin-top: 2rem;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background: var(--gradient-button);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(29, 78, 216, 0.3);
+}
+
+/* Complexity Selector - Horizontal Pills */
+.complexity-grid {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.complexity-pill {
+    flex: 1;
+    min-width: 100px;
+    cursor: pointer;
+}
+
+.complexity-pill input {
+    display: none;
+}
+
+.pill-content {
+    padding: 0.6rem;
+    text-align: center;
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-md);
+    background: var(--slate-50);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--slate-600);
+    transition: all 0.2s;
+}
+
+.complexity-pill input:checked+.pill-content {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* ========================================
+   Results Section
+   ======================================== */
+.results-section {
+    padding: 5rem 0;
+    background: var(--slate-50);
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--slate-800);
+}
+
+.card-ai {
+    grid-column: 1 / -1;
+    border-top: 4px solid var(--primary);
+}
+
+/* ========================================
+   AI Chat Overlay - Professional Bubble
+   ======================================== */
+.chat-trigger {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 64px;
+    height: 64px;
+    background: var(--gradient-button);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.75rem;
+    box-shadow: 0 8px 24px rgba(29, 78, 216, 0.4);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.chat-trigger:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ========================================
+   Animations & Utils
+   ======================================== */
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 1024px) {
+    .demo-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .hero-headline {
+        font-size: 2.5rem;
+    }
+
+    .value-list {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        margin-top: 2rem;
+        border: 4px solid white;
+    }
+
+    .indian-accent-badge {
+        display: inline-block;
+        background: #FFF7ED;
+        border: 1px solid #FFEDD5;
+        color: #EA580C;
+        padding: 0.4rem 1rem;
+        border-radius: 9999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    /* Metrics Section Like Powerplay */
+    .metrics-row {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin-top: 4rem;
+        border-top: 1px solid var(--slate-200);
+        padding-top: 4rem;
+    }
+
+    .metric-box {
+        text-align: center;
+    }
+
+    .metric-val {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--primary);
+    }
+
+    .metric-label {
+        font-size: 0.9rem;
+        color: var(--slate-500);
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+/* ========================================
+   Metrics and Indian Context
+   ======================================== */
+.hero-img-professional {
+    width: 100%;
+    max-width: 600px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    margin-top: 2rem;
+    border: 4px solid white;
+}
+
+.indian-accent-badge {
+    display: inline-block;
+    background: #FFF7ED;
+    border: 1px solid #FFEDD5;
+    color: #EA580C;
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Model Selector Styles */
+.model-selector-scroll {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+}
+
+.model-option {
+    cursor: pointer;
+    flex: 0 0 140px;
+}
+
+.model-option input {
+    display: none;
+}
+
+.model-card {
+    background: var(--slate-100);
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+    padding: 0.75rem;
+    text-align: center;
+    transition: all 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.model-icon {
+    font-size: 1.5rem;
+}
+
+.model-card span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--slate-700);
+}
+
+.model-option input:checked+.model-card {
+    border-color: var(--accent);
+    background: #FFFAF0;
+}
+
+/* Facing Grid */
+.facing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.facing-pill {
+    cursor: pointer;
+}
+
+.facing-pill input {
+    display: none;
+}
+
+.facing-pill span {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    background: var(--slate-100);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--slate-600);
+    transition: all 0.2s;
+}
+
+.facing-pill input:checked+span {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Blueprint Tabs */
+.tab-btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--slate-200);
+    background: var(--white);
+    color: var(--slate-600);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    background: var(--slate-50);
+}
+
+.tab-btn.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* AI Status Badge */
+.ai-status-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #94A3B8;
+    /* Default Gray */
+    border-radius: 50%;
+    position: relative;
+}
+
+.ai-status-badge.connected .status-dot {
+    background: #22C55E;
+    /* Green */
+    box-shadow: 0 0 8px #22C55E;
+    animation: pulse 2s infinite;
+}
+
+.ai-status-badge.offline .status-dot {
+    background: #EF4444;
+    /* Red */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
